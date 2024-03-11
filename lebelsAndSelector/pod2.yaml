@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mynginx2
+  labels:
+    environment: UAT
+    trer: frontend
+spec:
+  containers:
+    - name: nginx-container2
+      image: nginx
+      ports:
+        - containerPort: 80
