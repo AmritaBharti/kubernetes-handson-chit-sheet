@@ -1,0 +1,5 @@
+if you don't have Yaml file
+you can create pods with imperative way and get the yaml  of it.
+example -> kubectl get pod/mynginx > outputFileName (getting yaml file from allready running pods)
+
+example 2 => kubectl run mynginx --image mynginx -o yaml --dry-run=client > pod-cliend.yaml
