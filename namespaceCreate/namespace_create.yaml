@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demo-namespace2
+  labels:
+    environment: production
+    trer: frontend

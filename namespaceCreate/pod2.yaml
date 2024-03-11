@@ -1,0 +1,14 @@
+# at the time of pod creation we can mention the namespace in which you want to create -> kubectl apply -f .\pod2.yaml -n demo-namespace2
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mynginx2
+  labels: # 3 fields under metadata , all at the same level
+    environment: production
+    trer: frontend
+spec:
+  containers:
+    - name: nginx-container2
+      image: nginx
+      ports:
+        - containerPort: 80
