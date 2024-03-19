@@ -1,0 +1,2 @@
+---> get skeleton yaml file for deployment using below command
+kubectl create deployment nginx-deployment --image nginx --dry-run -o yaml
