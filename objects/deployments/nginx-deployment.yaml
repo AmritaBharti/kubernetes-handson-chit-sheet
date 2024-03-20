@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx-deployment
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: nginx-deployment
@@ -15,5 +15,12 @@ spec:
         app: nginx-deployment
     spec:
       containers:
-      - image: nginx
+      - image: nginx:1.23
         name: nginx
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+
+
